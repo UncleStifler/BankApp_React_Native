@@ -1,5 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {initializeApp} from "firebase/app";
 import {getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 import {getFirestore} from '@firebase/firestore'
 
@@ -13,7 +12,7 @@ const firebaseConfig = {
     measurementId: "G-8TV1KHJ9RN"
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 export const auth = getAuth()
 
 export const register = (email: string, password: string) =>
@@ -26,5 +25,4 @@ export const logout = () => signOut(auth)
 
 export const db = getFirestore()
 
-const analytics = getAnalytics(app);
 

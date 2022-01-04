@@ -1,10 +1,8 @@
-import React , {createContext, FC, useEffect, useMemo, useState} from "react";
-import firebase, {onAuthStateChanged} from "firebase/auth";
-import User = firebase.User;
+import React, {createContext, FC, useEffect, useMemo, useState} from "react";
+import  {onAuthStateChanged, User} from "firebase/auth";
 import {Alert} from "react-native";
 import {auth, db, login, logout, register} from "./firebase";
 import {addDoc, collection} from "@firebase/firestore"
-
 
 
 interface IContext {
