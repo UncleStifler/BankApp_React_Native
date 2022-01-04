@@ -1,5 +1,6 @@
 import {AuthProvider} from "./app/AuthProvider";
 import Navigation from "./app/navigation/Navigation";
+import {LogBox} from "react-native";
 
 export default function App() {
     return (
@@ -8,3 +9,6 @@ export default function App() {
         </AuthProvider>
     );
 }
+
+
+LogBox.ignoreAllLogs()
